@@ -760,7 +760,29 @@ body.ready .line-in { transform: translateY(0); }
 .band-title em { font-style: italic; color: #d9b8a6; }
 
 /* — visit — */
-.visit-inner { text-align: center; }
+.visit {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--paper-deep);
+}
+.visit::before,
+.visit::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.visit::before {
+  z-index: -2;
+  background: url("image.png") center / cover no-repeat;
+  opacity: 0.48;
+}
+.visit::after {
+  z-index: -1;
+  background: rgba(246, 246, 247, 0.58);
+}
+.visit-inner { position: relative; z-index: 1; text-align: center; }
 .visit-inner .section-sub { margin-inline: auto; }
 .visit-inner .hero-actions { margin-top: 34px; justify-content: center; }
 
