@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Fab Nation — Premium Knit Fabrics · Pune</title>
-  <meta name="description" content="Nirmal Knit — Fab Nation's signature 200+ GSM premium knit fabric. Soft, breathable, durable. Thirteen shades. Shukrawar Peth, Pune." />
-  <meta property="og:title" content="Fab Nation — Premium Knit Fabrics" />
-  <meta property="og:description" content="Nirmal Knit premium fabric. 200+ GSM, soft, breathable, durable. Thirteen shades. Shukrawar Peth, Pune." />
+  <title>Fab Nation — Premium Fabrics · Pune</title>
+  <meta name="description" content="Explore Nirmal Knit, Fab Nation's signature 200+ GSM premium knit, and enquire about other fabric rolls, constructions, and finishes in Pune." />
+  <meta property="og:title" content="Fab Nation — Premium Fabrics" />
+  <meta property="og:description" content="Nirmal Knit is one of Fab Nation's signature fabrics. Call us to check other rolls, constructions, colours, and finishes in Pune." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#f6f6f7" />
   <link rel="icon" href="Logo-removebg-preview.png" type="image/png" />
@@ -25,8 +25,9 @@
         <span class="nav-wordmark">Fab&nbsp;Nation</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#cloth">The Cloth</a>
-        <a href="#standard">Our Standard</a>
+        <a href="#cloth" data-nav="cloth">The Cloth</a>
+        <a href="#fabrics" data-nav="fabrics">Fabric guide</a>
+        <a href="#standard" data-nav="standard">Our Standard</a>
         <a class="nav-cta" href="contact.html">Contact</a>
       </nav>
     </div>
@@ -49,13 +50,14 @@
             <span class="line"><span class="line-in emphasis" style="--ld:2">You'll know.</span></span>
           </h1>
           <p class="hero-sub load" style="--ld:3">
-            <strong>Nirmal Knit</strong> is our signature knit cloth — a 200-plus GSM fabric
+            <strong>Nirmal Knit</strong> is one of our signature lines — a 200-plus GSM fabric
             that stays soft, breathes through long days, and keeps its shape wash after wash.
           </p>
           <div class="hero-actions load" style="--ld:4">
             <a class="btn btn-primary" href="#book-zone">Explore the shades</a>
-            <a class="btn btn-secondary" href="contact.html">Talk to us</a>
+            <a class="btn btn-secondary" href="contact.html">Speak with the team</a>
           </div>
+          <p class="hero-note load" style="--ld:4">Looking for a different fabric, knit, weave, or finish? <a href="tel:+919822888992">Call us</a> with what you are making and we will check current rolls, colours, and availability.</p>
         </div>
 
         <div class="book-zone" id="book-zone">
@@ -106,9 +108,14 @@
     <section class="section" id="cloth">
       <div class="container cloth-grid">
         <div class="cloth-stage reveal">
-          <div class="cloth-render" id="clothRender" style="--fc:#6e3b52">
+          <div class="cloth-render" id="clothRender" tabindex="0" aria-label="Interactive Nirmal Knit fabric preview" style="--fc:#6e3b52">
             <span class="render-fold" aria-hidden="true"></span>
             <span class="render-glow" aria-hidden="true"></span>
+            <span class="render-focus" aria-hidden="true"><span>KNIT STRUCTURE</span></span>
+            <span class="render-detail" aria-hidden="true">
+              <strong>Open-loop knit</strong>
+              <small>Breathable · soft thread</small>
+            </span>
             <span class="render-label" id="renderLabel">Plum</span>
           </div>
         </div>
@@ -137,15 +144,76 @@
       </div>
     </section>
 
+    <!-- ░ Fabric guide ░ -->
+    <section class="section fabric-guide" id="fabrics">
+      <div class="container">
+        <div class="fabric-guide-head reveal">
+          <div>
+            <p class="eyebrow eyebrow-brass">The Indian fabric guide</p>
+            <h2 class="section-title">Choose by feel.<br />Build by purpose.</h2>
+          </div>
+          <p class="section-sub">A quick field guide to the cloth you will commonly find across India's fabric market. Construction, weight, and finish matter as much as the fibre.</p>
+        </div>
+
+        <div class="fabric-grid">
+          <article class="fabric-item reveal" tabindex="0">
+            <p class="fabric-type">Cotton knits</p>
+            <h3>Jersey · Pique · Interlock · Rib</h3>
+            <p>Breathable, comfortable structures for tees, polos, everyday separates, collars, and cuffs.</p>
+          </article>
+          <article class="fabric-item reveal" data-delay="1" tabindex="0">
+            <p class="fabric-type">Sweatshirt knits</p>
+            <h3>French terry · Fleece</h3>
+            <p>Loopback for a lighter layer; brushed fleece when warmth and a soft inner hand matter.</p>
+          </article>
+          <article class="fabric-item reveal" data-delay="2" tabindex="0">
+            <p class="fabric-type">Woven cotton</p>
+            <h3>Poplin · Cambric · Twill</h3>
+            <p>Crisper and more structured than knits, making them useful for shirts, kurtas, uniforms, and trousers.</p>
+          </article>
+          <article class="fabric-item reveal" tabindex="0">
+            <p class="fabric-type">Fluid blends</p>
+            <h3>Viscose · Rayon · Modal</h3>
+            <p>Soft, fluid fabrics with an easy fall for dresses, shirts, linings, and relaxed silhouettes.</p>
+          </article>
+          <article class="fabric-item reveal" data-delay="1" tabindex="0">
+            <p class="fabric-type">Natural texture</p>
+            <h3>Linen · Cotton-linen</h3>
+            <p>Airy, textured choices for warm-weather clothing, with a natural ease that improves with wear.</p>
+          </article>
+          <article class="fabric-item reveal" data-delay="2" tabindex="0">
+            <p class="fabric-type">Structured utility</p>
+            <h3>Denim · Drill · Twill</h3>
+            <p>Durable woven fabrics for jeans, jackets, workwear, bags, and pieces that need more body.</p>
+          </article>
+        </div>
+
+        <div class="fabric-guide-cta reveal" data-delay="2">
+          <div>
+            <p class="fabric-type">Looking for something specific?</p>
+            <p class="fabric-cta-text">Stock, colours, widths, and finishes change. Call before you visit and we will check the right cloth for your job.</p>
+          </div>
+          <div class="fabric-cta-actions">
+            <a class="btn btn-primary" href="tel:+919822888992">Call to check</a>
+            <a class="btn btn-secondary" href="https://wa.me/919822888992?text=Hi%20Fab%20Nation%2C%20I%27m%20looking%20for%20fabric%20for%20a%20project." target="_blank" rel="noopener">WhatsApp us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ░ Standard band ░ -->
     <section class="band" id="standard">
       <div class="container band-inner">
         <div class="band-stats">
-          <div class="stat reveal"><span class="stat-num">13</span><span class="stat-label">Shades, dyed to hold their depth</span></div>
-          <div class="stat reveal" data-delay="1"><span class="stat-num">200+</span><span class="stat-label">Grams per square metre</span></div>
-          <div class="stat reveal" data-delay="2"><span class="stat-num">01</span><span class="stat-label">Standard — no seconds, no substitutes</span></div>
+          <div class="stat reveal"><span class="stat-num">13</span><span class="stat-label">Considered shades, each with depth</span></div>
+          <div class="stat reveal" data-delay="1"><span class="stat-num">200+</span><span class="stat-label">GSM for a soft drape that holds its shape</span></div>
+          <div class="stat reveal" data-delay="2"><span class="stat-num">01</span><span class="stat-label">Standard across every roll we sell</span></div>
         </div>
-        <h2 class="band-title reveal" data-delay="2">Nothing wasted.<br />Nothing loud.</h2>
+        <div class="band-copy reveal" data-delay="2">
+          <p class="eyebrow band-eyebrow">Our standard</p>
+          <h2 class="band-title">Made to be felt.<br />Made to last.</h2>
+          <p class="band-note">Whether you are sampling a first piece or replenishing for repeat production, we keep the process simple: compare the hand, confirm availability, and buy with confidence.</p>
+        </div>
       </div>
     </section>
 
@@ -159,7 +227,7 @@
           you more than any page can — every shade, in hand, in daylight.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="contact.html">Visit or call us</a>
+          <a class="btn btn-primary" href="contact.html">Visit the counter or call</a>
         </div>
       </div>
     </section>

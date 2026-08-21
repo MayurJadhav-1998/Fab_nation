@@ -61,7 +61,9 @@ $$(".reveal").forEach((el) => io.observe(el));
 
 /* ── Nav state ──────────────────────────────────────────── */
 const nav = $("#nav");
-const onScroll = () => nav.classList.toggle("is-scrolled", window.scrollY > 8);
+const onScroll = () => {
+  nav.classList.toggle("is-scrolled", window.scrollY > 8);
+};
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
@@ -215,7 +217,8 @@ if (document.body.dataset.page === "home") {
 
   /* scrollspy for the mobile tab bar */
   const tabs = $$(".tab[data-tab]");
-  const spies = [$(".hero"), $("#cloth")].filter(Boolean);
+  const navLinks = $$(".nav-links [data-nav]");
+  const spies = [$(".hero"), $("#cloth"), $("#fabrics"), $("#standard")].filter(Boolean);
   if ("IntersectionObserver" in window && spies.length) {
     const spy = new IntersectionObserver(
       (entries) => {
@@ -223,6 +226,7 @@ if (document.body.dataset.page === "home") {
           if (e.isIntersecting) {
             const id = e.target.classList.contains("hero") ? "home" : e.target.id;
             tabs.forEach((t) => t.classList.toggle("is-active", t.dataset.tab === id));
+            navLinks.forEach((link) => link.classList.toggle("is-active", link.dataset.nav === id));
           }
         }
       },
