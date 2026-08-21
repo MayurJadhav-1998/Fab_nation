@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Fab Nation — Premium Fabrics · Pune</title>
-  <meta name="description" content="Explore Nirmal Knit, Fab Nation's signature 200+ GSM premium knit, and enquire about other fabric rolls, constructions, and finishes in Pune." />
+  <meta name="description" content="Explore Fab Nation's premium fabric lines including Nirmal Knit, Dot Knit, Dri Fit, and more — quality fabrics for every need in Pune." />
   <meta property="og:title" content="Fab Nation — Premium Fabrics" />
-  <meta property="og:description" content="Nirmal Knit is one of Fab Nation's signature fabrics. Call us to check other rolls, constructions, colours, and finishes in Pune." />
+  <meta property="og:description" content="Multiple premium fabric lines crafted for every need — from signature knits to performance fabrics. Visit us in Pune." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#f6f6f7" />
-  <link rel="icon" href="Logo-removebg-preview.png" type="image/png" />
+  <link rel="icon" href="logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=5" />
+  <link rel="stylesheet" href="styles.css?v=11" />
 </head>
 <body data-page="home">
 
@@ -21,11 +21,11 @@
   <header class="nav" id="nav">
     <div class="nav-inner">
       <a class="nav-brand" href="#top" aria-label="Fab Nation — home">
-        <img class="nav-mark" src="Logo-removebg-preview.png" alt="" />
+        <img class="nav-mark" src="logo.png" alt="" />
         <span class="nav-wordmark">Fab&nbsp;Nation</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#cloth" data-nav="cloth">The Cloth</a>
+        <a href="#products" data-nav="products">Fabric lines</a>
         <a href="#fabrics" data-nav="fabrics">Fabric guide</a>
         <a href="#standard" data-nav="standard">Our Standard</a>
         <a class="nav-cta" href="contact.html">Contact</a>
@@ -50,43 +50,44 @@
             <span class="line"><span class="line-in emphasis" style="--ld:2">You'll know.</span></span>
           </h1>
           <p class="hero-sub load" style="--ld:3">
-            <strong>Nirmal Knit</strong> is one of our signature lines — a 200-plus GSM fabric
-            that stays soft, breathes through long days, and keeps its shape wash after wash.
+            <strong>Multiple premium fabric lines</strong> crafted for every need — from our signature
+            200+ GSM Nirmal Knit that stays soft wash after wash, to performance dri-fit, textured
+            knits, and lightweight everyday options. Each line is carefully constructed for comfort,
+            durability, and the perfect drape.
           </p>
           <div class="hero-actions load" style="--ld:4">
-            <a class="btn btn-primary" href="#book-zone">Explore the shades</a>
+            <a class="btn btn-primary" href="#products">Explore the fabric lines</a>
             <a class="btn btn-secondary" href="contact.html">Speak with the team</a>
           </div>
           <p class="hero-note load" style="--ld:4">Looking for a different fabric, knit, weave, or finish? <a href="tel:+919822888992">Call us</a> with what you are making and we will check current rolls, colours, and availability.</p>
         </div>
 
         <div class="book-zone" id="book-zone">
-          <div class="book" id="book" role="group" aria-label="Shade preview">
+          <div class="book" id="book" role="group" tabindex="0" aria-label="Shade preview" style="--fc:#6e3b52">
             <span class="book-ring" aria-hidden="true"></span>
             <div class="book-sway">
               <div class="book-tilt" id="bookTilt">
                 <div class="book-pages" aria-hidden="true"><i></i><i></i><i></i></div>
-                <article class="book-card" id="bookCard" style="--fc:#6e3b52; --card-ink:#f6f1ec">
+                <a class="book-card" id="bookCard" href="product.html?product=nirmal-knit" style="--fc:#6e3b52; --card-ink:#f6f1ec">
                   <span class="card-weave" aria-hidden="true"></span>
                   <span class="card-sheen" id="cardSheen" aria-hidden="true"></span>
                   <span class="card-hole" aria-hidden="true"></span>
                   <header class="card-head">
-                    <span>Nirmal Knit</span>
-                    <span>GSM 200+</span>
+                    <span id="heroProductName">Nirmal Knit</span>
                   </header>
                   <footer class="card-foot">
-                    <h2 class="card-name" id="cardName">Plum</h2>
-                    <p class="card-index"><span id="cardIndex">01</span> of 13 shades</p>
+                    <p class="card-gsm" id="heroProductSpec">200+ GSM</p>
+                    <span class="card-cta">View fabric line</span>
                   </footer>
-                </article>
+                </a>
               </div>
             </div>
             <div class="book-arrows">
-              <button class="book-arrow" id="prevShade" type="button" aria-label="Previous shade">
+              <button class="book-arrow" id="prevShade" type="button" aria-label="Previous fabric line">
                 <svg viewBox="0 0 24 24"><path d="M14.5 5.5L8 12l6.5 6.5"/></svg>
               </button>
               <div class="book-ticks" id="bookTicks" aria-hidden="true"></div>
-              <button class="book-arrow" id="nextShade" type="button" aria-label="Next shade">
+              <button class="book-arrow" id="nextShade" type="button" aria-label="Next fabric line">
                 <svg viewBox="0 0 24 24"><path d="M9.5 5.5L16 12l-6.5 6.5"/></svg>
               </button>
             </div>
@@ -94,14 +95,6 @@
         </div>
       </div>
 
-      <!-- Shade rail -->
-      <div class="container rail-zone reveal" data-delay="2">
-        <div class="rail-head">
-          <p class="rail-title">The shade library</p>
-          <p class="rail-hint">Tap a shade to open it on the card</p>
-        </div>
-        <div class="rail" id="rail" role="listbox" aria-label="All shades"></div>
-      </div>
     </section>
 
     <!-- ░ The cloth ░ -->
@@ -144,13 +137,115 @@
       </div>
     </section>
 
+    <!-- ░ Product lines ░ -->
+    <section class="section product-lines" id="products">
+      <div class="container">
+        <div class="product-lines-head reveal">
+          <div>
+            <p class="eyebrow eyebrow-brass">Our fabric lines</p>
+            <h2 class="section-title">Cloth we keep<br />on the counter.</h2>
+          </div>
+          <p class="section-sub">Nirmal Knit is the signature. These are the lines we work with most — choose one to see weight, feel, colours, and what it is best for.</p>
+        </div>
+
+        <div class="product-grid">
+          <a href="product.html?product=nirmal-knit" class="product-card product-card-featured reveal" style="--fc:#6e3b52; --card-ink:#f6f1ec">
+            <div class="product-swatch" aria-hidden="true">
+              <span class="swatch-weave"></span>
+            </div>
+            <div class="product-card-body">
+              <p class="product-kicker">Signature line</p>
+              <h3>Nirmal Knit</h3>
+              <p class="product-spec">200+ GSM · Soft knit</p>
+              <p>Our featured premium knit for comfortable everyday garments, with a broad shade library.</p>
+              <span class="product-cta">View cloth details →</span>
+            </div>
+          </a>
+          <a href="product.html?product=dot-knit" class="product-card reveal" data-delay="1" style="--fc:#5a7b9a; --card-ink:#f6f1ec">
+            <div class="product-swatch" aria-hidden="true">
+              <span class="swatch-dot"></span>
+            </div>
+            <div class="product-card-body">
+              <p class="product-kicker">Textured knit</p>
+              <h3>Dot Knit</h3>
+              <p class="product-spec">175 GSM · Soft and breathable</p>
+              <p>A lightweight textured knit for comfortable everyday pieces and casual garments.</p>
+              <span class="product-cta">View cloth details →</span>
+            </div>
+          </a>
+          <a href="product.html?product=mars" class="product-card reveal" data-delay="2" style="--fc:#b86a44; --card-ink:#f6f1ec">
+            <div class="product-swatch" aria-hidden="true">
+              <span class="swatch-weave"></span>
+            </div>
+            <div class="product-card-body">
+              <p class="product-kicker">Everyday premium</p>
+              <h3>Mars</h3>
+              <p class="product-spec">200 GSM · Soft and durable</p>
+              <p>A balanced everyday fabric line for soft, breathable garments with dependable wear.</p>
+              <span class="product-cta">View cloth details →</span>
+            </div>
+          </a>
+          <a href="product.html?product=dull-dri-fit" class="product-card reveal" style="--fc:#505763; --card-ink:#f6f1ec">
+            <div class="product-swatch" aria-hidden="true">
+              <span class="swatch-mesh"></span>
+            </div>
+            <div class="product-card-body">
+              <p class="product-kicker">Performance knit</p>
+              <h3>Dull Dri Fit</h3>
+              <p class="product-spec">220–230 GSM · Reliance yarn fabric</p>
+              <p>Made for active, uniform, and performance-led garments that need breathability and durability.</p>
+              <span class="product-cta">View cloth details →</span>
+            </div>
+          </a>
+          <a href="product.html?product=salina" class="product-card reveal" data-delay="1" style="--fc:#7a9b76; --card-ink:#f6f1ec">
+            <div class="product-swatch" aria-hidden="true">
+              <span class="swatch-weave"></span>
+            </div>
+            <div class="product-card-body">
+              <p class="product-kicker">Lightweight line</p>
+              <h3>Salina</h3>
+              <p class="product-spec">160 GSM · Lightweight fabric</p>
+              <p>A lighter option for easy dailywear and warm-weather garments where comfort matters.</p>
+              <span class="product-cta">View cloth details →</span>
+            </div>
+          </a>
+          <a href="product.html?product=pcpq" class="product-card reveal" data-delay="2" style="--fc:#2c3e50; --card-ink:#f6f1ec">
+            <div class="product-swatch" aria-hidden="true">
+              <span class="swatch-thick"></span>
+            </div>
+            <div class="product-card-body">
+              <p class="product-kicker">Premium T-shirt fabric</p>
+              <h3>PCPQ</h3>
+              <p class="product-spec">230 GSM · Premium fabric</p>
+              <p>A heavier premium fabric suited to structured, high-quality T-shirts and everyday essentials.</p>
+              <span class="product-cta">View cloth details →</span>
+            </div>
+          </a>
+          <a href="product.html?product=super-poly" class="product-card reveal" data-delay="3" style="--fc:#e8e0d5; --card-ink:#201c20">
+            <div class="product-swatch" aria-hidden="true">
+              <span class="swatch-smooth"></span>
+            </div>
+            <div class="product-card-body">
+              <p class="product-kicker">Poly fabric</p>
+              <h3>Super Poly</h3>
+              <p class="product-spec">180 GSM · Soft and breathable</p>
+              <p>A versatile lightweight poly line for premium casual, uniform, and everyday garment programs.</p>
+              <span class="product-cta">View cloth details →</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="product-lines-note reveal" data-delay="2">Colours, widths, finishes, and roll availability can change. Call or WhatsApp us before planning your order.</div>
+      </div>
+    </section>
+
     <!-- ░ Fabric guide ░ -->
     <section class="section fabric-guide" id="fabrics">
       <div class="container">
         <div class="fabric-guide-head reveal">
           <div>
             <p class="eyebrow eyebrow-brass">The Indian fabric guide</p>
-            <h2 class="section-title">Choose by feel.<br />Build by purpose.</h2>
+            <h2 class="section-title">logoBuild by purpose.</h2>
           </div>
           <p class="section-sub">A quick field guide to the cloth you will commonly find across India's fabric market. Construction, weight, and finish matter as much as the fibre.</p>
         </div>
@@ -181,7 +276,7 @@
             <h3>Linen · Cotton-linen</h3>
             <p>Airy, textured choices for warm-weather clothing, with a natural ease that improves with wear.</p>
           </article>
-          <article class="fabric-item reveal" data-delay="2" tabindex="0">
+          <article class="productsem reveal" data-delay="2" tabindex="0">
             <p class="fabric-type">Structured utility</p>
             <h3>Denim · Drill · Twill</h3>
             <p>Durable woven fabrics for jeans, jackets, workwear, bags, and pieces that need more body.</p>
@@ -191,7 +286,7 @@
         <div class="fabric-guide-cta reveal" data-delay="2">
           <div>
             <p class="fabric-type">Looking for something specific?</p>
-            <p class="fabric-cta-text">Stock, colours, widths, and finishes change. Call before you visit and we will check the right cloth for your job.</p>
+            <p class="fabri5-cta-text">Stock, colours, widths, and finishes change. Call before you visit and we will check the right cloth for your job.</p>
           </div>
           <div class="fabric-cta-actions">
             <a class="btn btn-primary" href="tel:+919822888992">Call to check</a>
@@ -238,7 +333,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img class="footer-mark" src="Logo-removebg-preview.png" alt="" />
+        <img class="footer-mark" src="logo.png" alt="" />
         <div>
           <p class="footer-name">Fab Nation</p>
           <p class="footer-tag">Fabrics for all.</p>
@@ -269,9 +364,9 @@
       <svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v8a1.5 1.5 0 0 1-1.5 1.5H14v-6h-4v6H5.5A1.5 1.5 0 0 1 4 19v-8Z"/></svg>
       <span>Home</span>
     </a>
-    <a class="tab" href="#cloth" data-tab="cloth">
+    <a class="tab" href="#products" data-tab="products">
       <svg viewBox="0 0 24 24"><path d="M4.5 8.5l7.5-4.5 7.5 4.5v7L12 20l-7.5-4.5v-7Z"/><path d="M4.5 8.5L12 13l7.5-4.5M12 13v7"/></svg>
-      <span>The Cloth</span>
+      <span>Fabric lines</span>
     </a>
     <a class="tab" href="contact.html" data-tab="contact">
       <svg viewBox="0 0 24 24"><path d="M6.5 4h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3c0 1-1 2-2 2C10 19.5 4.5 14 4.5 6c0-1 1-2 2-2Z"/></svg>
@@ -279,6 +374,6 @@
     </a>
   </nav>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>

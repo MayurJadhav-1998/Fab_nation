@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Fabric line — Fab Nation · Pune</title>
+  <meta name="description" content="Explore a Fab Nation fabric line: GSM, colour range, feel, and intended use. Call to confirm current rolls and availability." />
+  <meta name="theme-color" content="#f6f6f7" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=9" />
+</head>
+<body data-page="product">
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html" aria-label="Fab Nation — home">
+        <img class="nav-mark" src="logo.png" alt="" />
+        <span class="nav-wordmark">Fab&nbsp;Nation</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#products">Fabric lines</a>
+        <a href="index.html#fabrics">Fabric guide</a>
+        <a href="index.html#standard">Our Standard</a>
+        <a class="nav-cta" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="product-page">
+    <section class="product-hero">
+      <div class="container product-hero-inner">
+        <a class="back-link" href="index.html#products">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5L8 12l6.5 6.5"/></svg>
+          Back to fabric lines
+        </a>
+        <div class="product-hero-grid">
+          <div class="product-hero-copy">
+            <p class="eyebrow eyebrow-brass load" style="--ld:1" id="productKicker"></p>
+            <h1 class="page-title load" style="--ld:2" id="productTitle"></h1>
+            <p class="product-hero-spec load" style="--ld:3" id="productSpec"></p>
+            <p class="section-sub load" style="--ld:4" id="productDescription"></p>
+            <div class="hero-actions load" style="--ld:5">
+              <a class="btn btn-primary" href="tel:+919822888992">Call to check availability</a>
+              <a class="btn btn-secondary" id="productWhatsApp" href="https://wa.me/919822888992" target="_blank" rel="noopener">WhatsApp us</a>
+            </div>
+          </div>
+          <div class="product-cloth-stage reveal" id="productStage">
+            <div class="cloth-render" id="productClothRender" tabindex="0" aria-label="Interactive fabric preview">
+              <span class="render-fold" aria-hidden="true"></span>
+              <span class="render-glow" aria-hidden="true"></span>
+              <span class="render-focus" aria-hidden="true"><span>FABRIC STRUCTURE</span></span>
+              <span class="render-detail" aria-hidden="true"><strong id="productMaterialLabel">Fabric line</strong><small id="productMaterialNote">Touch, weight, and colour</small></span>
+              <span class="render-label" id="productColorName"></span>
+            </div>
+            <div class="product-color-controls">
+              <button class="book-arrow" id="productPrevColor" type="button" aria-label="Previous colour"><svg viewBox="0 0 24 24"><path d="M14.5 5.5L8 12l6.5 6.5"/></svg></button>
+              <div class="product-color-rail" id="productColorRail" role="listbox" aria-label="Available colours"></div>
+              <button class="book-arrow" id="productNextColor" type="button" aria-label="Next colour"><svg viewBox="0 0 24 24"><path d="M9.5 5.5L16 12l-6.5 6.5"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section product-details-section">
+      <div class="container product-details-grid">
+        <div>
+          <p class="eyebrow eyebrow-brass reveal">At a glance</p>
+          <h2 class="section-title reveal" data-delay="1">Know the cloth<br />before the cut.</h2>
+        </div>
+        <dl class="product-detail-list reveal" data-delay="2" id="productDetails"></dl>
+      </div>
+    </section>
+
+    <section class="section product-callout">
+      <div class="container product-callout-inner reveal">
+        <div>
+          <p class="eyebrow eyebrow-brass">Need a closer match?</p>
+          <h2 class="section-title">Bring us the brief.</h2>
+          <p class="section-sub">Tell us the garment, weight, colour, quantity, and finish you need. We will check the closest available roll at our Pune counter.</p>
+        </div>
+        <a class="btn btn-primary" href="contact.html">Speak with the fabric team</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img class="footer-mark" src="logo.png" alt="" />
+        <div><p class="footer-name">Fab Nation</p><p class="footer-tag">Fabrics for all.</p></div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col"><p class="footer-head">Visit</p><p class="footer-text">Shop No. 7, Near Mandai Metro Gate No. 2,<br />Shukrawar Peth, Pune, Maharashtra</p></div>
+        <div class="footer-col"><p class="footer-head">Call</p><p class="footer-text"><a href="tel:+919822888992">+91 98228 88992</a><br /><a href="tel:+918698462020">+91 86984 62020</a></p></div>
+      </div>
+    </div>
+    <div class="container footer-base"><p>© <span id="year">2026</span> Fab Nation · Fabrics for all</p></div>
+  </footer>
+  <script src="script.js?v=5"></script>
+</body>
+</html>
