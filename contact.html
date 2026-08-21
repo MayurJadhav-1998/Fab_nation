@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Contact — Fab Nation · Pune</title>
+  <meta name="description" content="Get in touch with Fab Nation. Call us or visit the counter — Shop No. 7, Near Mandai Metro Gate No. 2, Shukrawar Peth, Pune." />
+  <meta name="theme-color" content="#f6f6f7" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=4" />
+</head>
+<body data-page="contact">
+
+  <!-- ░ Top navigation ░ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html" aria-label="Fab Nation — home">
+        <span class="nav-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><rect x="2.5" y="2.5" width="27" height="27" rx="7" fill="#161319"/><rect x="2.5" y="2.5" width="27" height="27" rx="7" fill="none" stroke="#6e3b52" stroke-opacity="0.55" stroke-width="1"/><path d="M9.5 11h13M9.5 21h13" stroke="#e9e5ec" stroke-opacity="0.5" stroke-width="1.3" stroke-linecap="round"/><text x="16" y="20.4" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="13.5" fill="#f6f2f6">N</text></svg>
+        </span>
+        <span class="nav-wordmark">Fab&nbsp;Nation</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#cloth">The Cloth</a>
+        <a href="index.html#standard">Our Standard</a>
+        <a class="nav-cta" href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ░ Hero ░ -->
+    <section class="page-hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="thread thread-a"></div>
+        <div class="thread thread-b"></div>
+      </div>
+      <div class="container page-hero-inner">
+        <a class="back-link load" style="--ld:0" href="index.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5L8 12l6.5 6.5"/></svg>
+          Back to the cloth
+        </a>
+        <h1 class="page-title load" style="--ld:1">Talk to<br /><em>a human.</em></h1>
+        <p class="section-sub load" style="--ld:2">
+          Call, message, or step up to the counter — we'll walk you through
+          every shade by hand.
+        </p>
+        <div class="enquiry-chip load" style="--ld:3" id="enquiryChip" hidden>
+          <span class="chip-dot" aria-hidden="true"></span>
+          Enquiring about <strong id="enquiryText"></strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░ Contact cards ░ -->
+    <section class="section contact-section">
+      <div class="container contact-grid">
+
+        <article class="contact-card reveal" data-delay="1">
+          <span class="contact-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6.5 4h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3c0 1-1 2-2 2C10 19.5 4.5 14 4.5 6c0-1 1-2 2-2Z"/></svg>
+          </span>
+          <h2>Call the owners</h2>
+          <p class="contact-hint">Shades, availability, anything at all — you'll reach us, not a menu.</p>
+          <div class="phone-list">
+            <div class="phone-row">
+              <div>
+                <p class="phone-num">+91 98228 88992</p>
+                <p class="phone-lbl">Primary</p>
+              </div>
+              <div class="phone-actions">
+                <a class="mini-btn mini-btn-solid" href="tel:+919822888992">Call</a>
+                <a class="mini-btn" href="https://wa.me/919822888992" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+            <div class="phone-row">
+              <div>
+                <p class="phone-num">+91 86984 60220</p>
+                <p class="phone-lbl">Alternate</p>
+              </div>
+              <div class="phone-actions">
+                <a class="mini-btn mini-btn-solid" href="tel:+918698460220">Call</a>
+                <a class="mini-btn" href="https://wa.me/918698460220" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="contact-card reveal" data-delay="2">
+          <span class="contact-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 21s-6.5-5.2-6.5-10a6.5 6.5 0 0 1 13 0c0 4.8-6.5 10-6.5 10Z"/><circle cx="12" cy="11" r="2.4"/></svg>
+          </span>
+          <h2>Come to the counter</h2>
+          <p class="contact-hint">Feel the cloth and see all thirteen shades side by side, in daylight.</p>
+          <address class="address">
+            Shop No. 7, Near Mandai Metro Gate No. 2,<br />
+            Shukrawar Peth, Pune, Maharashtra
+          </address>
+          <div class="phone-actions">
+            <a class="mini-btn mini-btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=Mandai+Metro+Station+Gate+No+2+Shukrawar+Peth+Pune+Maharashtra" target="_blank" rel="noopener">Get directions</a>
+            <button class="mini-btn" type="button" id="copyAddr">Copy address</button>
+          </div>
+          <p class="copy-note" id="copyNote" role="status"></p>
+        </article>
+
+      </div>
+
+      <div class="container">
+        <div class="map-card reveal" data-delay="3">
+          <iframe
+            title="Fab Nation on the map — Shukrawar Peth, Pune"
+            src="https://www.google.com/maps?q=Shukrawar+Peth,+Pune,+Maharashtra&z=15&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ░ Footer ░ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="nav-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><rect x="2.5" y="2.5" width="27" height="27" rx="7" fill="#161319"/><rect x="2.5" y="2.5" width="27" height="27" rx="7" fill="none" stroke="#6e3b52" stroke-opacity="0.55" stroke-width="1"/><path d="M9.5 11h13M9.5 21h13" stroke="#e9e5ec" stroke-opacity="0.5" stroke-width="1.3" stroke-linecap="round"/><text x="16" y="20.4" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="13.5" fill="#f6f2f6">N</text></svg>
+        </span>
+        <div>
+          <p class="footer-name">Fab Nation</p>
+          <p class="footer-tag">Fabrics for all.</p>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <p class="footer-head">Visit</p>
+          <p class="footer-text">Shop No. 7, Near Mandai Metro Gate No. 2,<br />Shukrawar Peth, Pune, Maharashtra</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-head">Call</p>
+          <p class="footer-text">
+            <a href="tel:+919822888992">+91 98228 88992</a><br />
+            <a href="tel:+918698460220">+91 86984 60220</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-base">
+      <p>© <span id="year">2026</span> Fab Nation · Fabrics for all</p>
+    </div>
+  </footer>
+
+  <!-- ░ Mobile tab bar ░ -->
+  <nav class="tabbar" aria-label="Primary mobile">
+    <a class="tab" href="index.html" data-tab="home">
+      <svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v8a1.5 1.5 0 0 1-1.5 1.5H14v-6h-4v6H5.5A1.5 1.5 0 0 1 4 19v-8Z"/></svg>
+      <span>Home</span>
+    </a>
+    <a class="tab" href="index.html#cloth" data-tab="cloth">
+      <svg viewBox="0 0 24 24"><path d="M4.5 8.5l7.5-4.5 7.5 4.5v7L12 20l-7.5-4.5v-7Z"/><path d="M4.5 8.5L12 13l7.5-4.5M12 13v7"/></svg>
+      <span>The Cloth</span>
+    </a>
+    <a class="tab is-active" href="contact.html" data-tab="contact">
+      <svg viewBox="0 0 24 24"><path d="M6.5 4h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3c0 1-1 2-2 2C10 19.5 4.5 14 4.5 6c0-1 1-2 2-2Z"/></svg>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
