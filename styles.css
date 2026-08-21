@@ -470,14 +470,50 @@ body.ready .line-in { animation: lineRise 1s var(--ease-ios) both; animation-del
   to { transform: none; opacity: 1; }
 }
 
-.card-weave {
+.card-weave,
+.render-weave {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background:
-    repeating-linear-gradient(46deg, rgba(255, 255, 255, 0.05) 0 2px, transparent 2px 5px),
-    repeating-linear-gradient(-46deg, rgba(0, 0, 0, 0.045) 0 2px, transparent 2px 5px);
+  mix-blend-mode: soft-light;
+  opacity: 0.9;
+}
+.card-weave {
   mix-blend-mode: overlay;
+}
+
+/* Fabric weave patterns - different structure for each fabric type */
+.weave-knit {
+  background:
+    repeating-linear-gradient(46deg, rgba(255, 255, 255, 0.06) 0 2px, transparent 2px 5px),
+    repeating-linear-gradient(-46deg, rgba(0, 0, 0, 0.05) 0 2px, transparent 2px 5px);
+}
+
+.weave-dot {
+  background: radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1.5px);
+  background-size: 6px 6px;
+}
+
+.weave-mesh {
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.07) 0 1px, transparent 1px 4px);
+}
+
+.weave-thick {
+  background:
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.08) 0 3px, transparent 3px 7px),
+    repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.07) 0 3px, transparent 3px 7px);
+}
+
+.weave-smooth {
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.03) 100%);
+}
+
+.weave-fine {
+  background:
+    repeating-linear-gradient(60deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(-60deg, rgba(0, 0, 0, 0.03) 0 1px, transparent 1px 4px);
 }
 
 .card-sheen {
@@ -527,7 +563,7 @@ body.ready .line-in { animation: lineRise 1s var(--ease-ios) both; animation-del
   font-fami{
   text-align: center;
 }
-.card-foot ly: var(--font-display);
+.card-footly: var(--font-display);
   font-weight: 470;
   font-style: italic;
   font-size: clamp(2rem, 5vw, 2.5rem);
@@ -817,7 +853,8 @@ body.ready .line-in { animation: lineRise 1s var(--ease-ios) both; animation-del
   background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, transparent 40%);
 }
 
-/* Fabric weave textures */
+/* Fabric weave textures - consistent across all cards, hero, and product page */
+.weave-knit,
 .swatch-weave {
   position: absolute;
   inset: 0;
@@ -826,6 +863,7 @@ body.ready .line-in { animation: lineRise 1s var(--ease-ios) both; animation-del
     repeating-linear-gradient(-46deg, rgba(0, 0, 0, 0.06) 0 2px, transparent 2px 5px);
   mix-blend-mode: overlay;
 }
+.weave-dot,
 .swatch-dot {
   position: absolute;
   inset: 0;
@@ -833,6 +871,7 @@ body.ready .line-in { animation: lineRise 1s var(--ease-ios) both; animation-del
   background-size: 6px 6px;
   mix-blend-mode: overlay;
 }
+.weave-mesh,
 .swatch-mesh {
   position: absolute;
   inset: 0;
@@ -841,6 +880,7 @@ body.ready .line-in { animation: lineRise 1s var(--ease-ios) both; animation-del
     repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0 1px, transparent 1px 4px);
   mix-blend-mode: overlay;
 }
+.weave-thick,
 .swatch-thick {
   position: absolute;
   inset: 0;
@@ -849,10 +889,20 @@ body.ready .line-in { animation: lineRise 1s var(--ease-ios) both; animation-del
     repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.07) 0 3px, transparent 3px 7px);
   mix-blend-mode: overlay;
 }
+.weave-smooth,
 .swatch-smooth {
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.05) 100%);
+}
+.weave-fine,
+.swatch-fine {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(60deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(-60deg, rgba(0, 0, 0, 0.04) 0 1px, transparent 1px 4px);
+  mix-blend-mode: overlay;
 }
 
 .product-card-body { padding: 22px 22px 24px; background: var(--card); }
@@ -956,17 +1006,39 @@ body.ready .line-in { animation: lineRise 1s var(--ease-ios) both; animation-del
   position: absolute;
   inset: -18%;
   background:
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.17) 0 1px, transparent 1px 9px),
-    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.14) 0 1px, transparent 1px 9px);
+    repeating-linear-gradient(46deg, rgba(255, 255, 255, 0.1) 0 2px, transparent 2px 5px),
+    repeating-linear-gradient(-46deg, rgba(0, 0, 0, 0.09) 0 2px, transparent 2px 5px);
   mix-blend-mode: soft-light;
-  opacity: 0;
-  transform: scale(0.9) rotate(-3deg);
-  transition: opacity 0.7s ease, transform 1s var(--ease-out);
+  opacity: 0.8;
+  transform: scale(0.96);
+  transition: opacity 0.7s ease, transform 1s var(--ease-out), background 0.7s ease;
   pointer-events: none;
+}
+.cloth-render.weave-dot::after {
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 1.2px, transparent 2px);
+  background-size: 7px 7px;
+}
+.cloth-render.weave-mesh::after {
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0 1px, transparent 1px 5px),
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.13) 0 1px, transparent 1px 5px);
+}
+.cloth-render.weave-thick::after {
+  background:
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.12) 0 3px, transparent 3px 7px),
+    repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 0 3px, transparent 3px 7px);
+}
+.cloth-render.weave-smooth::after {
+  background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(0,0,0,0.05) 100%);
+}
+.cloth-render.weave-fine::after {
+  background:
+    repeating-linear-gradient(60deg, rgba(255, 255, 255, 0.07) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(-60deg, rgba(0, 0, 0, 0.06) 0 1px, transparent 1px 4px);
 }
 .cloth-render:hover::after,
 .cloth-render:focus-visible::after {
-  opacity: 0.9;
+  opacity: 1;
   transform: scale(1.08) rotate(0deg);
 }
 .cloth-render.shade-swap .render-glow {
@@ -986,7 +1058,37 @@ body.ready .line-in { animation: lineRise 1s var(--ease-ios) both; animation-del
     linear-gradient(100deg, transparent 20%, rgba(0, 0, 0, 0.12) 42%, transparent 52%, rgba(0, 0, 0, 0.1) 70%, transparent 82%);
   mix-blend-mode: overlay;
   animation: weaveShift 18s ease-in-out infinite alternate;
-  transition: opacity 0.7s ease, filter 0.7s ease;
+  transition: opacity 0.7s ease, filter 0.7s ease, background 0.7s ease;
+  pointer-events: none;
+}
+.cloth-render.weave-dot .render-fold {
+  background:
+    radial-gradient(circle, rgba(255,255,255,0.09) 1.2px, transparent 2px),
+    linear-gradient(100deg, transparent 20%, rgba(0, 0, 0, 0.12) 42%, transparent 52%, rgba(0, 0, 0, 0.1) 70%, transparent 82%);
+  background-size: 7px 7px, 100% 100%;
+}
+.cloth-render.weave-mesh .render-fold {
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.07) 0 1px, transparent 1px 5px),
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.07) 0 1px, transparent 1px 5px),
+    linear-gradient(100deg, transparent 20%, rgba(0, 0, 0, 0.12) 42%, transparent 52%, rgba(0, 0, 0, 0.1) 70%, transparent 82%);
+}
+.cloth-render.weave-thick .render-fold {
+  background:
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.07) 0 3px, transparent 3px 7px),
+    repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.06) 0 3px, transparent 3px 7px),
+    linear-gradient(100deg, transparent 20%, rgba(0, 0, 0, 0.12) 42%, transparent 52%, rgba(0, 0, 0, 0.1) 70%, transparent 82%);
+}
+.cloth-render.weave-smooth .render-fold {
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0.03) 100%),
+    linear-gradient(100deg, transparent 20%, rgba(0, 0, 0, 0.12) 42%, transparent 52%, rgba(0, 0, 0, 0.1) 70%, transparent 82%);
+}
+.cloth-render.weave-fine .render-fold {
+  background:
+    repeating-linear-gradient(60deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(-60deg, rgba(0, 0, 0, 0.03) 0 1px, transparent 1px 4px),
+    linear-gradient(100deg, transparent 20%, rgba(0, 0, 0, 0.12) 42%, transparent 52%, rgba(0, 0, 0, 0.1) 70%, transparent 82%);
 }
 @keyframes weaveShift {
   from { background-position: 0 0, 0 0, 0 0; }
@@ -1038,8 +1140,8 @@ body.ready .line-in { animation: lineRise 1s var(--ease-ios) both; animation-del
   border-radius: 14px;
   background:
     linear-gradient(rgba(32, 28, 32, 0.32), rgba(32, 28, 32, 0.32)),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.32) 0 1px, transparent 1px 8px),
-    repeating-linear-gradient(90deg, rgba(32, 28, 32, 0.28) 0 1px, transparent 1px 8px),
+    repeating-linear-gradient(46deg, rgba(255, 255, 255, 0.3) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(-46deg, rgba(32, 28, 32, 0.25) 0 1px, transparent 1px 4px),
     var(--fc);
   background-blend-mode: normal, screen, normal, normal;
   -webkit-backdrop-filter: blur(10px) saturate(125%);
@@ -1047,8 +1149,42 @@ body.ready .line-in { animation: lineRise 1s var(--ease-ios) both; animation-del
   box-shadow: 0 14px 30px -16px rgba(32, 28, 32, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.25);
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.82) rotate(-2deg);
-  transition: opacity 0.5s var(--ease-out), transform 0.7s var(--ease-out);
+  transition: opacity 0.5s var(--ease-out), transform 0.7s var(--ease-out), background 0.7s ease;
   pointer-events: none;
+}
+.cloth-render.weave-dot .render-focus {
+  background:
+    linear-gradient(rgba(32, 28, 32, 0.32), rgba(32, 28, 32, 0.32)),
+    radial-gradient(circle, rgba(255,255,255,0.35) 1.2px, transparent 2px),
+    var(--fc);
+  background-size: auto, 7px 7px, 100% 100%;
+}
+.cloth-render.weave-mesh .render-focus {
+  background:
+    linear-gradient(rgba(32, 28, 32, 0.32), rgba(32, 28, 32, 0.32)),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.35) 0 1px, transparent 1px 5px),
+    repeating-linear-gradient(90deg, rgba(32, 28, 32, 0.3) 0 1px, transparent 1px 5px),
+    var(--fc);
+}
+.cloth-render.weave-thick .render-focus {
+  background:
+    linear-gradient(rgba(32, 28, 32, 0.32), rgba(32, 28, 32, 0.32)),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.28) 0 2px, transparent 2px 5px),
+    repeating-linear-gradient(-45deg, rgba(32, 28, 32, 0.22) 0 2px, transparent 2px 5px),
+    var(--fc);
+}
+.cloth-render.weave-smooth .render-focus {
+  background:
+    linear-gradient(rgba(32, 28, 32, 0.28), rgba(32, 28, 32, 0.28)),
+    linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.1) 100%),
+    var(--fc);
+}
+.cloth-render.weave-fine .render-focus {
+  background:
+    linear-gradient(rgba(32, 28, 32, 0.32), rgba(32, 28, 32, 0.32)),
+    repeating-linear-gradient(60deg, rgba(255, 255, 255, 0.22) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(-60deg, rgba(32, 28, 32, 0.18) 0 1px, transparent 1px 4px),
+    var(--fc);
 }
 .render-focus span {
   position: absolute;

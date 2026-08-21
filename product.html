@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=9" />
+  <link rel="stylesheet" href="styles.css?v=12" />
 </head>
 <body data-page="product">
   <header class="nav" id="nav">
@@ -21,7 +21,6 @@
       </a>
       <nav class="nav-links" aria-label="Primary">
         <a href="index.html#products">Fabric lines</a>
-        <a href="index.html#fabrics">Fabric guide</a>
         <a href="index.html#standard">Our Standard</a>
         <a class="nav-cta" href="contact.html">Contact</a>
       </nav>
@@ -47,7 +46,8 @@
             </div>
           </div>
           <div class="product-cloth-stage reveal" id="productStage">
-            <div class="cloth-render" id="productClothRender" tabindex="0" aria-label="Interactive fabric preview">
+            <div class="cloth-render" id="productClothRender" tabindex="0" aria-label="Interactive fabric preview" data-weave="weave-knit">
+              <span class="render-weave weave-knit" aria-hidden="true" id="productRenderWeave"></span>
               <span class="render-fold" aria-hidden="true"></span>
               <span class="render-glow" aria-hidden="true"></span>
               <span class="render-focus" aria-hidden="true"><span>FABRIC STRUCTURE</span></span>
@@ -99,6 +99,6 @@
     </div>
     <div class="container footer-base"><p>© <span id="year">2026</span> Fab Nation · Fabrics for all</p></div>
   </footer>
-  <script src="script.js?v=5"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>
