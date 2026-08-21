@@ -129,22 +129,30 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 /* page-load (hero) */
 .load {
-  opacity: 0;
-  transform: translateY(22px);
+  opacity: 1;
+  transform: none;
   transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
   transition-delay: calc(120ms + var(--ld, 0) * 110ms);
 }
-body.ready .load { opacity: 1; transform: none; }
+body.ready .load { animation: loadRise 0.9s var(--ease-out) both; animation-delay: calc(120ms + var(--ld, 0) * 110ms); }
+@keyframes loadRise {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: none; }
+}
 
 /* headline lines rise from a clipped mask */
 .hero-title .line { display: block; overflow: hidden; }
 .line-in {
   display: inline-block;
-  transform: translateY(112%);
+  transform: none;
   transition: transform 1s var(--ease-ios);
   transition-delay: calc(180ms + var(--ld, 0) * 130ms);
 }
-body.ready .line-in { transform: translateY(0); }
+body.ready .line-in { animation: lineRise 1s var(--ease-ios) both; animation-delay: calc(180ms + var(--ld, 0) * 130ms); }
+@keyframes lineRise {
+  from { opacity: 0; transform: translateY(112%); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 /* scroll reveal */
 .reveal {
